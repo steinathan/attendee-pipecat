@@ -154,6 +154,7 @@ source = { virtual = "." }
 dependencies = [
     { name = "fastapi" },
     { name = "httpx" },
+    { name = "jinja2" },
     { name = "pipecat-ai", extra = ["daily", "elevenlabs", "google", "openai", "runner", "silero"] },
     { name = "pyngrok" },
     { name = "python-dotenv" },
@@ -166,6 +167,7 @@ dependencies = [
 requires-dist = [
     { name = "fastapi", specifier = ">=0.68.0" },
     { name = "httpx", specifier = ">=0.23.0" },
+    { name = "jinja2", specifier = ">=3.0.0" },
     { name = "pipecat-ai", extras = ["daily", "elevenlabs", "openai", "silero", "google", "runner"], specifier = ">=0.0.79" },
     { name = "pyngrok", specifier = ">=7.0.0" },
     { name = "python-dotenv", specifier = ">=0.19.0" },

@@ -13,4 +13,5 @@ dependencies = [
     "httpx>=0.23.0",
     "pipecat-ai[daily,elevenlabs,openai,silero,google,runner]>=0.0.79",
     "pyngrok>=7.0.0",
+    "jinja2>=3.0.0",
 ]
