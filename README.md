@@ -40,7 +40,18 @@ This project demonstrates how to create a real-time voice agent using Pipecat fr
    ```
 4. Run the application:
    ```
+   uv run app/main.py
+   ```
+   
+   Alternatively, you can activate the virtual environment and run directly:
+   ```
+   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
    python app/main.py
+   ```
+   
+   If port 8080 is already in use, you can specify a different port:
+   ```
+   PORT=8081 uv run app/main.py
    ```
 
 ## Usage
@@ -61,18 +72,6 @@ This project demonstrates how to create a real-time voice agent using Pipecat fr
 - `static/index.html`: Frontend interface
 - `pyproject.toml`: Project dependencies and metadata
 - `.env.example`: Environment variable template
-
-## How It Works
-
-1. The browser connects to the FastAPI server via WebSocket
-2. User configures the voice agent through the web interface
-3. When "Launch Voice Agent" is clicked, the server calls Attendee API to join the meeting
-4. Audio is streamed in real-time between the browser and the Pipecat pipeline
-5. Pipecat processes the audio through:
-   - Deepgram STT (speech-to-text)
-   - OpenAI LLM (language processing)
-   - Deepgram TTS (text-to-speech)
-6. The processed audio is sent back to the browser and into the meeting
 
 ## API Endpoints
 
